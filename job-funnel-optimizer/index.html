@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Job Funnel Optimizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Job Funnel Optimizer</h1>
+    <p>Track applications. Spot patterns. Improve outcomes.</p>
+  </header>
+
+  <!-- ADD APPLICATION -->
+  <section id="add-app">
+    <h2>Add Application</h2>
+
+    <input id="company" placeholder="Company" />
+    <input id="role" placeholder="Role" />
+
+    <select id="companyType">
+      <option value="Startup">Startup</option>
+      <option value="MNC">MNC</option>
+      <option value="Unknown">Unknown</option>
+    </select>
+
+    <input id="resumeName" placeholder="Resume name (e.g. Backend Resume)" />
+
+
+    <select id="status">
+      <option value="Applied">Applied</option>
+      <option value="Interview">Interview</option>
+      <option value="Rejected">Rejected</option>
+      <option value="Offer">Offer</option>
+    </select>
+
+    <select id="stage">
+      <option value="Resume">Resume</option>
+      <option value="HR">HR</option>
+      <option value="Technical">Technical</option>
+      <option value="Final">Final</option>
+    </select>
+
+    <input id="dateApplied" type="date" />
+
+    <textarea id="notes" placeholder="Notes (optional)"></textarea>
+
+    <button id="addBtn">Add Application</button>
+  </section>
+
+  <!-- APPLICATIONS TABLE -->
+  <section>
+    <h2>Applications</h2>
+    <table id="appTable">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Role</th>
+          <th>Resume</th>
+          <th>Status</th>
+          <th>Stage</th>
+          <th>Date</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <!-- FUNNEL -->
+  <section>
+  <h2>Funnel</h2>
+  <div id="followUpAlert" style="margin-bottom:10px;"></div>
+
+  <div id="funnelStats"></div>
+
+  <h3>Resume-wise Funnel</h3>
+  <div id="resumeFunnels"></div>
+
+  <h3>Role-wise Funnel</h3>
+  <div id="roleFunnels"></div>
+
+  <h3>Company-type Funnel</h3>
+<div id="companyTypeFunnels"></div>
+
+  
+</section>
+
+
+  <!-- INSIGHTS -->
+  <section>
+    <h2>Insights</h2>
+    <div id="insights"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
